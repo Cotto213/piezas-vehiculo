@@ -1,19 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
 import {  Text, View } from 'react-native';
-
-
+import { Navigator } from './Navigation/navigator';
+import { NavigationContainer } from '@react-navigation/native';
 import { NativeWindStyleSheet } from "nativewind";
+import PartsForm from './src/views/PartsForm';
 
 NativeWindStyleSheet.setOutput({
   default: "native",
 });
 
-export default function App() {
+export default function App(navigation) {
   return (
-    <View className="flex-1  items-center justify-center bg-gray-800">
-    <Text className="font-semibold text-white">Open up App.js to start working on your app!</Text>
-    <StatusBar style="auto" />
-  </View>
+    <NavigationContainer >
+      <Navigator>
+       
+      </Navigator>
+    </NavigationContainer>
   );
 }
 ;
